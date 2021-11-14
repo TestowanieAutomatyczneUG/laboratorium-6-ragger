@@ -3,8 +3,9 @@ class Hamming:
     def distance(self, str1, str2):
         i = 0
         count = 0
-        if (str1  == str2):
-            return count
+        if (str1  != str2):
+            count += 1
+        return count
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
         self.assertEqual(self.hamming.distance("", ""), 0)
