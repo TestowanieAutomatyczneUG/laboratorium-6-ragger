@@ -3,11 +3,11 @@ class Hamming:
     def distance(self, str1, str2):
         i = 0
         count = 0
-        if (str1  != str2):
-            if len(str1) == 1:
+
+        while (i < len(str1)):
+            if (str1[i] != str2[i]):
                 count += 1
-            else:
-                count = 9
+            i += 1
         return count
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
