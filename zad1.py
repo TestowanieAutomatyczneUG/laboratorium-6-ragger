@@ -10,8 +10,10 @@ class Hamming:
                     count += 1
                 i += 1
             return count
-        if len(str1) != len(str2):
-            raise ValueError("Rozna dlugosc stringow")
+        if len(str1)  > len(str2) and len(str1) != 0 and len(str2) != 0 :
+            raise ValueError("Pierwszy str dłuższy od drugiego")
+        if len(str2) > len(str1) and len(str1) != 0 and len(str2) != 0:
+            raise ValueError("Drugi str dluzszy  od pierwszego")
 
 
 class HammingTest(unittest.TestCase):
@@ -39,10 +41,9 @@ class HammingTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.hamming.distance("ATA", "AGTG")
 
-    @unittest.skip
     def test_disallow_left_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
-            hamming.distance("", "G")
+            self.hamming.distance("", "G")
 
     @unittest.skip
     def test_disallow_right_empty_strand(self):
