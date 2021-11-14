@@ -20,9 +20,8 @@ class HammingTest(unittest.TestCase):
     def test_long_identical_strands(self):
         self.assertEqual(self.hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
-    @unittest.skip
     def test_long_different_strands(self):
-        self.assertEqual(hamming.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
+        self.assertEqual(self.hamming.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
 
     @unittest.skip
     def test_disallow_first_strand_longer(self):
