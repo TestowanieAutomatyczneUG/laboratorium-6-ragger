@@ -7,12 +7,13 @@ class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
         hamming = Hamming()
         self.assertEqual(hamming.distance("", ""), 0)
-    @unittest.skip
+
     def test_single_letter_identical_strands(self):
+        hamming = Hamming()
         self.assertEqual(hamming.distance("A", "A"), 0)
 
-    @unittest.skip
     def test_single_letter_different_strands(self):
+        hamming = Hamming()
         self.assertEqual(hamming.distance("G", "T"), 1)
 
     @unittest.skip
