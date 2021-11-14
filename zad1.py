@@ -10,15 +10,10 @@ class Hamming:
                     count += 1
                 i += 1
             return count
-        if len(str1)  > len(str2) and len(str1) != 0 and len(str2) != 0 :
-            raise ValueError("Pierwszy str dłuższy od drugiego")
-        if len(str2) > len(str1) and len(str1) != 0 and len(str2) != 0:
-            raise ValueError("Drugi str dluzszy  od pierwszego")
-        if len(str1) == 0:
-            raise ValueError("Pierwszy str pusty")
-        if len(str2) == 0:
-            raise ValueError("Drugi str pusty")
-
+        if len(str1)  > len(str2) :
+            raise ValueError("Drugi  str   pusty lub krotszy od pierwszego")
+        if len(str2) > len(str1):
+            raise ValueError("pierwszy  str   pusty lub krotszy od drugiego")
 
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
