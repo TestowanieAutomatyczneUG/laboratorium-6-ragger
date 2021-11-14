@@ -1,7 +1,14 @@
 import unittest
 class Hamming:
     def distance(self, str1, str2):
-        return 0
+        i = 0
+        count = 0
+
+        while (i < len(str1)):
+            if (str1[i] != str2[i]):
+                count += 1
+            i += 1
+        return count
 class HammingTest(unittest.TestCase):
 
     def test_empty_strands(self):
