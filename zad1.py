@@ -1,6 +1,7 @@
 import unittest
 class Hamming:
-    pass
+    def distance(self, str1, str2):
+        return 0
 class HammingTest(unittest.TestCase):
 
     def test_empty_strands(self):
