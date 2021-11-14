@@ -1,14 +1,18 @@
 import unittest
 class Hamming:
     def distance(self, str1, str2):
-        i = 0
-        count = 0
+        if len(str1) == len(str2):
+            i = 0
+            count = 0
 
-        while (i < len(str1)):
-            if (str1[i] != str2[i]):
-                count += 1
-            i += 1
-        return count
+            while (i < len(str1)):
+                if (str1[i] != str2[i]):
+                    count += 1
+                i += 1
+            return count
+        if len(str1) > len(str2):
+            raise ValueError("Pierwszy str dłuższy od drugiego")
+
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
         self.assertEqual(self.hamming.distance("", ""), 0)
