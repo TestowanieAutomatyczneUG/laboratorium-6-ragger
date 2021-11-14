@@ -12,6 +12,8 @@ class Hamming:
             return count
         if len(str1) > len(str2):
             raise ValueError("Pierwszy str dłuższy od drugiego")
+        if len(str2) > len(str1):
+            raise ValueError("Drugi str dluzszy  od pierwszego")
 
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
