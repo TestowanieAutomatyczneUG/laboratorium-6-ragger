@@ -10,18 +10,16 @@ class Hamming:
             i += 1
         return count
 class HammingTest(unittest.TestCase):
-
     def test_empty_strands(self):
-        hamming = Hamming()
-        self.assertEqual(hamming.distance("", ""), 0)
+
+        self.assertEqual(self.hamming.distance("", ""), 0)
 
     def test_single_letter_identical_strands(self):
-        hamming = Hamming()
-        self.assertEqual(hamming.distance("A", "A"), 0)
+
+        self.assertEqual(self.hamming.distance("A", "A"), 0)
 
     def test_single_letter_different_strands(self):
-        hamming = Hamming()
-        self.assertEqual(hamming.distance("G", "T"), 1)
+        self.assertEqual(self.hamming.distance("G", "T"), 1)
 
     @unittest.skip
     def test_long_identical_strands(self):
@@ -53,6 +51,7 @@ class HammingTest(unittest.TestCase):
 
     # Utility functions
     def setUp(self):
+        self.hamming = Hamming()
         try:
             self.assertRaisesRegex
         except AttributeError:
