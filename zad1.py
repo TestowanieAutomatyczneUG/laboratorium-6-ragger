@@ -14,6 +14,8 @@ class Hamming:
             raise ValueError("Pierwszy str dłuższy od drugiego")
         if len(str2) > len(str1) and len(str1) != 0 and len(str2) != 0:
             raise ValueError("Drugi str dluzszy  od pierwszego")
+        if len(str1) == 0:
+            raise ValueError("Pierwszy str pusty")
 
 
 class HammingTest(unittest.TestCase):
