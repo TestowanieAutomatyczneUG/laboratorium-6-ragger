@@ -7,6 +7,8 @@ def roman(num):
         return "IV"
     if num == 5:
         return "V"
+    if num == 9:
+        return "IX"
     while num > 5:
         roman = "V"
         num -= 5
@@ -34,7 +36,6 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_6_being_5_1_is_vi(self):
         self.assertEqual(roman(6), "VI")
 
-    @unittest.skip
     def test_9_being_10_1_is_ix(self):
         self.assertEqual(roman(9), "IX")
 
