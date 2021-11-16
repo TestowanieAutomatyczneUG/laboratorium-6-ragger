@@ -2,12 +2,11 @@ import unittest
 
 
 def roman(num):
-    if (num) == 1:
-        return "I"
-    if (num) == 2:
-        return "II"
-    else:
-        return "III"
+    roman = ""
+    while (num > 0):
+        roman += "I"
+        num -= 1
+    return roman
 
 class RomanNumeralsTest(unittest.TestCase):
     def test_1_is_a_single_i(self):
