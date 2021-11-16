@@ -24,7 +24,15 @@ class ChristmasSong:
 		return self.christmasSong[i]
 
 	def getVerses(self, startAt, endAt):
-			return self.christmasSong[startAt:endAt]
+		startAt = 0 if startAt is None else startAt
+		endAt = 0 if endAt is None else endAt
+		if startAt < 0 or endAt < 0:
+			raise IndexError
+		if startAt > len(self.christmasSong) or endAt > len(self.christmasSong):
+			raise IndexError
+		if endAt < startAt:
+			raise ValueError
+		return self.christmasSong[startAt:endAt]
 
 	def getAllVerses(self):
 		return self.christmasSong
