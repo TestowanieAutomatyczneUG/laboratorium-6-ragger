@@ -3,8 +3,14 @@ import unittest
 
 def roman(num):
     roman = ""
+    romanGreaterThan4 = "V"
     if num == 4:
         return "IV"
+    if num == 5:
+        return "V"
+    while num > 5:
+        romanGreaterThan4 += "I"
+        num -= 1
     while (num > 0):
         roman += "I"
         num -= 1
