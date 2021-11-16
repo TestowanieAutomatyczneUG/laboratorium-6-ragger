@@ -23,3 +23,6 @@ class ChristmasSong:
 
 	def getVerses(self, startAt, endAt):
 			return self.christmasSong[startAt:endAt]
+
+	def getAllVerses(self):
+		return self.christmasSong
