@@ -19,6 +19,8 @@ class ChristmasSong:
 	]
 
 	def getVerse(self, i):
+		if i < 0:
+			raise IndexError
 		return self.christmasSong[i]
 
 	def getVerses(self, startAt, endAt):
