@@ -3,6 +3,8 @@ import unittest
 
 def roman(num):
     roman = ""
+    if num == 4:
+        return "IV"
     while (num > 0):
         roman += "I"
         num -= 1
