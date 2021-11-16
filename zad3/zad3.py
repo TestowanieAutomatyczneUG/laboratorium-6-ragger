@@ -27,9 +27,9 @@ class ChristmasSong:
 			raise ValueError
 		return self.christmasSong[i]
 
-	def getVerses(self, startAt, endAt):
+	def getVerses(self, startAt=None, endAt=None):
 		startAt = 0 if startAt is None else startAt
-		endAt = 0 if endAt is None else endAt
+		endAt = len(self.christmasSong) if endAt is None else endAt
 		if startAt < 0 or endAt < 0:
 			raise IndexError
 		if startAt > len(self.christmasSong) or endAt > len(self.christmasSong):
