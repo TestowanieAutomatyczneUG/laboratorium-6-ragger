@@ -23,6 +23,8 @@ class ChristmasSong:
 			raise IndexError
 		if i > len(self.christmasSong):
 			raise IndexError
+		if not isinstance(i, int):
+			raise ValueError
 		return self.christmasSong[i]
 
 	def getVerses(self, startAt, endAt):
