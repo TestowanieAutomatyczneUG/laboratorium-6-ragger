@@ -18,5 +18,8 @@ class ChristmasSong:
 		] if lines
 	]
 
-	def getLine(self, i):
+	def getVerse(self, i):
 		return self.christmasSong[i]
+
+	def getVerses(self, startAt, endAt):
+			return self.christmasSong[startAt:endAt]
