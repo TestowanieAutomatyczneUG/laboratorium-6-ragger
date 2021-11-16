@@ -5,11 +5,9 @@ def roman(num):
     roman = ""
     if num == 4:
         return "IV"
-    if num == 5:
-        return "V"
     if num == 9:
         return "IX"
-    while num > 5:
+    while num >= 5:
         roman = "V"
         num -= 5
     while (num > 0):
