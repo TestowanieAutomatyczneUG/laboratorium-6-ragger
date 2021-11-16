@@ -2,7 +2,10 @@ import unittest
 
 
 def roman(num):
-    return "I"
+    if (num) == 1:
+        return "I"
+    else:
+        return "II"
 
 class RomanNumeralsTest(unittest.TestCase):
     def test_1_is_a_single_i(self):
