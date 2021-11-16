@@ -1,6 +1,6 @@
 class ChristmasSong:
 	christmasSong=[
-		strippedLine for strippedLine in [
+		lines for lines in [
 			line.strip() for line in """
 				On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
 				On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.
@@ -15,5 +15,8 @@ class ChristmasSong:
 				On the eleventh day of Christmas my true love gave to me: eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
 				On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
 			""".split("\n")
-		]
+		] if lines
 	]
+
+	def getLine(self, i):
+		return self.christmasSong[i]
