@@ -31,5 +31,10 @@ class ChristmasSongTest(unittest.TestCase):
     def test_getVerse_negative(self):
         self.assertRaises(IndexError, self.christmasSong.getVerse, -1)
 
+    def test_getVerse_150(self):
+        self.assertRaises(IndexError, self.christmasSong.getVerse, 150)
+    def test_getVerse_float(self):
+        self.assertRaises(ValueError, self.christmasSong.getVerse, 1.5)
+
 if __name__ == "__main__":
     unittest.main()
