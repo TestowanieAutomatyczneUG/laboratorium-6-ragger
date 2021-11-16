@@ -3,14 +3,13 @@ import unittest
 
 def roman(num):
     roman = ""
-    romanGreaterThan4 = "V"
     if num == 4:
         return "IV"
     if num == 5:
         return "V"
     while num > 5:
-        romanGreaterThan4 += "I"
-        num -= 1
+        roman = "V"
+        num -= 5
     while (num > 0):
         roman += "I"
         num -= 1
@@ -32,7 +31,6 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_5_is_a_single_v(self):
         self.assertEqual(roman(5), "V")
 
-    @unittest.skip
     def test_6_being_5_1_is_vi(self):
         self.assertEqual(roman(6), "VI")
 
