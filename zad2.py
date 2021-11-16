@@ -2,8 +2,8 @@ import unittest
 
 
 def roman(num):
-    arabic = [10, 9, 5, 4, 1]
-    syb = ["X", "IX", "V", "IV", "I"]
+    arabic = [ 40, 10, 9, 5, 4, 1]
+    syb = [ "XL", "X", "IX", "V", "IV", "I"]
     roman = ''
     i = 0
     while num > 0:
